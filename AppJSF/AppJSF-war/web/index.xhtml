@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/WEB-INF/templates/identificacao.xhtml">
+        <ui:define name="content">
+            <div class="loginBox">
+                <br/>
+                <f:view>
+                    <h:form id="login">
+                        <h:panelGrid columns="2" border="0">
+                            <h:outputLabel styleClass="labels" for="txtLogin" value="#{msgs.lbLogin}"/>
+                            <h:inputText id="txtLogin" value="#{usuarioMNG.login}"/>
+                            <h:outputLabel styleClass="labels" for="txtLogin" value="#{msgs.lbPasswd}"/>
+                            <h:inputSecret id="txtSenha" value="#{usuarioMNG.senha}"/>
+                            <h:outputLabel styleClass="labels" ></h:outputLabel>
+                            <h:commandButton id="submit" styleClass="buttons" type="submit" value="#{msgs.btLogin}" action="#{usuarioMNG.valida}"/>
+                        </h:panelGrid>
+                    </h:form>
+                </f:view>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>

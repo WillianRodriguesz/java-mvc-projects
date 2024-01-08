@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/WEB-INF/templates/default.xhtml">
+        <ui:define name="content">
+             <h:form id="formulario">
+                 <h:outputText value="#{msgs.titFuncUpdate}" styleClass="tituloCadastros"/>
+                <br/>
+                <h:outputLabel styleClass="labels" for="txtCodigo" value="#{msgs.lbDeptId}"/>
+                <h:inputText id="txtCodigo" styleClass="inputs" value="${funcionarioMNG.codigo}" readonly="true" validatorMessage="#{msgs.msgCodFunc}" >
+                    <f:validateLongRange/>
+                </h:inputText>
+                <h:inputHidden value="${funcionarioMNG.codigo}"/>
+                <h:inputHidden value="${funcionarioMNG.dtContratacao}">
+                    <f:convertDateTime type="both"/>
+                </h:inputHidden>
+                <h:inputHidden value="${funcionarioMNG.salario}">
+                    <f:convertNumber type="currency" />
+                </h:inputHidden>
+                <h:message for="txtCodigo" styleClass="error"/>
+                <br/>
+                <h:outputLabel styleClass="labels" for="txtDescricao" value="#{msgs.lbFuncNome}"/>
+                <h:inputText id="txtDescricao" styleClass="inputs" value="${funcionarioMNG.nome}" />
+                <h:message for="txtDescricao" styleClass="error"/>
+                <br/>
+                <h:outputLabel styleClass="labels" for="cmbDepartamento" value="#{msgs.lbCmbDept}"/>
+                <h:selectOneMenu id="cmbDepartamento" styleClass="combos" converter="departamentoConverter" value="#{funcionarioMNG.departamento}">
+                    <f:selectItems value="#{departamentoMNG.listaSelectItem}" var ="vDept" itemLabel="#{vDept.descricao}"/>
+                </h:selectOneMenu>
+                <h:message for="cmbDepartamento" styleClass="error"/>
+                <br/>
+                <h:commandButton styleClass="buttons" value="#{msgs.btClear}">
+                    <f:ajax render="@form" listener="#{funcionarioMNG.clear}"/>
+                </h:commandButton>
+                <h:commandButton styleClass="buttons" value="Salvar" action="#{funcionarioMNG.update}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

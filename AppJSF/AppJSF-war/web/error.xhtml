@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/WEB-INF/templates/identificacao.xhtml">
+        <ui:define name="content">
+            <div class="erroBox">
+                <br/>
+                <f:view>
+                    <h:form id="erro">
+                        <h:panelGrid columns="2" border="0">
+                            <h:outputLabel styleClass="labelserro lebals" value="Erro geral"/>
+                            <br/>
+                            <h:outputLabel styleClass="labelserro lebals" value="#{requestScope['javax.servlet.error.message']}"/>
+                            <br/>
+                            <h:outputLabel styleClass="labelserro lebals" value="#{requestScope['javax.servlet.error.exception']}"/>
+                        </h:panelGrid>
+                        <h:commandLink id="submit" styleClass="links" value="#{msgs.btBack}" action="sair"/>
+                    <h:messages errorClass="error" showDetail="true"/>
+                    </h:form>
+                </f:view>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+

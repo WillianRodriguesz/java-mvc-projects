@@ -1,0 +1,54 @@
+/* 
+    Document   : default
+    Created on : Nov 3, 2010, 6:30:09 PM
+    Author     : mertins
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+*{
+    margin:0;
+}
+
+#container{
+    width:998px; 
+    margin:0 auto;
+    text-align:center;
+}
+
+#header{
+    float:left; 
+    width:996px;
+    height:85px;
+    background-color: #f7bd02;
+    font-weight: bolder;
+}
+
+#nav{
+    float:left;
+    width:153px;
+    background-color: #599623;
+    height: 500px;
+}
+
+#content{
+    float:left;
+    height:500px;
+    width: 843px;
+    text-align: left;
+}
+
+#footer{
+    clear:both; 
+    height:40px;
+    background:#f7bd02;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 160px;
+}
+

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/WEB-INF/templates/default.xhtml">
+        <ui:define name="content">
+            <h:form id="formulario">
+                <h:outputText value="#{msgs.titFuncList}" styleClass="tituloCadastros"/>
+                <h:commandButton styleClass="buttons" value="#{msgs.btNew}" action="funcionarioNew"/>
+                <br/>
+                <div class="tabela">
+                    <h:dataTable value="#{funcionarioMNG.lista}" var="func" styleClass="tablebg" headerClass="cabecalhoTabela"  rowClasses="tabelalinhaimpar,tabelalinhapar">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{msgs.lbFuncId}"/>
+                            </f:facet>
+                            <h:outputText value="#{func.codigo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{msgs.lbFuncNome}"/>
+                            </f:facet>
+                            <h:outputText value="#{func.nome}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{msgs.lbCmbDept}"/>
+                            </f:facet>
+                            <h:outputText value="#{func.departamento.descricao}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value=" " />
+                            </f:facet>
+                            <h:commandLink immediate="true" value="#{msgs.btRemove}"  actionListener="#{funcionarioMNG.remove()}" onclick="if (!confirm('#{msgs.msgConfRemove}')) return false" >
+                                <f:param name="codExcluir" value="#{func.codigo}" />
+                            </h:commandLink>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value=" " />
+                            </f:facet>
+                            <h:commandLink immediate="true" value="#{msgs.btUpdate}"  action="#{funcionarioMNG.prepUpdate()}">
+                                <f:param name="codEditar" value="#{func.codigo}" />
+                            </h:commandLink>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition template="/WEB-INF/templates/default.xhtml">
+        <ui:define name="content">
+            <h:form id="formulario">
+                <h:outputText value="#{msgs.titDeptList}" styleClass="tituloCadastros"/>
+                <h:commandButton styleClass="buttons" value="#{msgs.btNew}" action="departamentoNew"/>
+                <br/>
+                <div class="tabela">
+                    <h:dataTable value="#{departamentoMNG.lista}" var="dept" styleClass="tablebg" headerClass="cabecalhoTabela"  rowClasses="tabelalinhaimpar,tabelalinhapar">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{msgs.lbDeptId}"/>
+                            </f:facet>
+                            <h:outputText value="#{dept.codigo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{msgs.lbDeptDesc}"/>
+                            </f:facet>
+                            <h:outputText value="#{dept.descricao}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="" />
+                            </f:facet>
+                            <h:commandLink immediate="true" value="#{msgs.btRemove}"  actionListener="#{departamentoMNG.remove()}" onclick="if (!confirm('#{msgs.msgConfRemove}')) return false" >
+                                <f:param name="codExcluir" value="#{dept.codigo}" />
+                            </h:commandLink>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="" />
+                            </f:facet>
+                            <h:commandLink immediate="true" value="#{msgs.btUpdate}"  action="#{departamentoMNG.prepUpdate()}">
+                                <f:param name="codEditar" value="#{dept.codigo}" />
+                            </h:commandLink>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+
