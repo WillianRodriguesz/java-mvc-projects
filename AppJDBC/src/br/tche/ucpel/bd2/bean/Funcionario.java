@@ -5,6 +5,7 @@ import java.util.Date;
 
 /**
  * Classe que representa a Entidade Funcionário no Sistema
+ *
  * @author mertins
  */
 public class Funcionario {
@@ -40,14 +41,6 @@ public class Funcionario {
         this.cod = cod;
     }
 
-    public Departamento getDepartamento() {
-        return departamento;
-    }
-
-    public void setDepartamento(Departamento departamento) {
-        this.departamento = departamento;
-    }
-
     public Date getDtContratacao() {
         return dtContratacao;
     }
@@ -63,6 +56,16 @@ public class Funcionario {
     public void setGerente(Funcionario gerente) {
         this.gerente = gerente;
     }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
+
+    
 
     public String getNome() {
         return nome;
