@@ -23,7 +23,7 @@
             document.getElementById("txtCodigoGerente").value = "";
             document.getElementById("txtSalario").value = "";
             document.getElementById("txtCodigoDepartamento").value = "";
-            // Adicione outros campos conforme necessário
+            
         }
 
         function salvar() {
@@ -43,8 +43,9 @@
 
         function clickTabela(cod) {
             document.getElementById("txtCodigo").value = cod;
+           
             document.getElementById("acaoCRUD").value = "carregar";
-            document.formfunc.submit();
+            //document.formfunc.submit();
         }
     </script>
     <body>
@@ -67,7 +68,7 @@
                         Funcionario funcionario = (Funcionario) request.getAttribute("funcionario");
                     %>
                     <br/>
-                    <label class="labels" for="txtCodigo">Código</label><input readonly="true" style="background-color: #afafaf " class="inputs" id="txtCodigo" name="txtCodigo" type="text" value="<%=funcionario != null ? funcionario.getCod() : ""%>"/>
+                    <label class="labels">Código</label><input class="inputs" id="txtCodigo" name="txtCodigo" type="text" value="<%=funcionario != null ? funcionario.getCod() : ""%>"/>
                     <br/>
                     <label class="labels" for="txtNome">Nome</label><input class="inputs" id="txtNome" name="txtNome" type="text" value="<%=funcionario != null ? funcionario.getNome() : ""%>"/>
                     <br/>
