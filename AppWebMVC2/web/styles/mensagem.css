@@ -1,0 +1,59 @@
+/* mensagem.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: verdana, Arial, Helvetica, sans-serif; /* Mesma fonte do index.jsp */
+    color: #CCCCCC;
+    background-color: #2E2E2E;
+}
+
+.wrapper {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+}
+
+#container {
+    padding: 30px 0;
+}
+
+h1 {
+    color: #3A3B3F;
+    background-color: #FFFFFF;
+    margin: 0 0 20px 0;
+    padding: 0 0 8px 0;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-bottom: 1px dashed #DDDDDD;
+}
+
+.chat-box {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.message p {
+    line-height: 1.6em;
+}
+
+.message p.link {
+    margin-top: 10px;
+}
+
+.message a {
+    color: #FF6600;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}

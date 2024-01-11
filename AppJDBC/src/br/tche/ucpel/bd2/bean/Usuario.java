@@ -10,7 +10,9 @@ public class Usuario {
     private int cod;
     private String login;
     private String senha;
-
+    
+    
+    
     public int getCod() {
         return cod;
     }

@@ -1,0 +1,47 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: verdana, Arial, Helvetica, sans-serif; /* Mesma fonte do index.jsp */
+    color: #CCCCCC;
+    background-color: #2E2E2E;
+}
+
+form {
+    display: block;
+    width: 300px;
+    margin: 100px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #FF6600;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
