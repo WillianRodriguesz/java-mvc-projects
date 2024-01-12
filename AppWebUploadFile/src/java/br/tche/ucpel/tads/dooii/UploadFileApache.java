@@ -44,7 +44,6 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 @WebServlet(name = "uploadFileApache", urlPatterns = {"/uploadFileApache"})
 public class UploadFileApache extends HttpServlet {
 
-    @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         if (ServletFileUpload.isMultipartContent(req)) {
@@ -90,7 +89,7 @@ public class UploadFileApache extends HttpServlet {
     }
 
     private void gravaFile(String valorDoParametro, String fileName, FileItem item) throws IOException, Exception {
-        File arquivo = new File(String.format("/home/mertins/temp/%s_%s", valorDoParametro, fileName));
+        File arquivo = new File(String.format("/home/willian/Documentos/Treinamento MM/pastaUpload/%s%s", valorDoParametro, fileName));
         arquivo.createNewFile();
         item.write(arquivo);
         Logger.getLogger(UploadFileApache.class.getName()).log(Level.INFO, String.format("Gravou no Arquivo [%s]", String.format("%s_%s", valorDoParametro, fileName)));
@@ -100,7 +99,7 @@ public class UploadFileApache extends HttpServlet {
         Connection conn = null;
         try {
             Context context = new InitialContext();
-            DataSource dataSource = (DataSource) context.lookup("jdbc/BaseUCPel");
+            DataSource dataSource = (DataSource) context.lookup("jdbc/teste_aula");
             conn = dataSource.getConnection();
             ArquivoDAO dao= new ArquivoDAO(conn);
             Arquivo arq=new Arquivo();
