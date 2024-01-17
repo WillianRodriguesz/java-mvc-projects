@@ -26,8 +26,7 @@ public class ServletPrincipal extends HttpServlet {
         try {
             Context context = new InitialContext();
             dataSource = (DataSource) context.lookup("jdbc/teste_aula");
-            conn = dataSource.getConnection();            
-            String acao = req.getParameter("acao");
+            conn = dataSource.getConnection();            String acao = req.getParameter("acao");
             if ("login".equals(acao)) {
                 LoginController lc=new LoginController(req, resp, conn);
                 lc.processo();
