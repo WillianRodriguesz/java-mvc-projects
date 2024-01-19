@@ -4,7 +4,6 @@ import br.edu.ucpel.engc.labprog2.consultacorreios.ws.CResultado;
 import java.math.BigDecimal;
 
 /**
- *
  * @author mertins
  */
 public class ConsultaCorreios {
