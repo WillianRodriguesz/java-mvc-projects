@@ -8,28 +8,28 @@ O objetivo principal destes projetos é fornecer um ambiente de aprendizado prá
 ## Lista de Projetos
 
 1. **AppJDBC**
-   - **Descrição:** Correção de projeto utilizando JDBC.
+   - **Descrição:** Projeto focado no desenvolvimento de habilidades de comunicação com banco de dados utilizando JDBC.
 
 2. **AppJPA**
-   - **Descrição:** Adição de funcionalidades em um projeto utilizando Java Persistence API (JPA).
+   - **Descrição:** Projeto destinado a desenvolver habilidades de integração com banco de dados utilizando a API Java Persistence (JPA).
 
 3. **AppJSF**
-   - **Descrição:** Adição de recursos em um projeto JavaServer Faces (JSF).
+   - **Descrição:** Projeto para aprimorar habilidades no desenvolvimento de interfaces web utilizando JavaServer Faces (JSF).
 
 4. **AppWebMVC**
-   - **Descrição:** Correção de projeto utilizando o padrão MVC para aplicações web.
+   - **Descrição:** Projeto voltado para o entendimento e aplicação do padrão MVC em aplicações web.
 
 5. **AppWebMVC2**
-   - **Descrição:** Correção de projeto utilizando o padrão MVC para aplicações web.
+   - **Descrição:** Projeto adicional que continua a exploração e prática do padrão MVC em contextos específicos de aplicações web.
 
 6. **AppWebMVCHtml5**
-   - **Descrição:** Adição de novos projetos utilizando o padrão MVC com HTML5.
+   - **Descrição:** Projeto que envolve o uso do padrão MVC em conjunto com HTML5, explorando integrações mais modernas.
 
 7. **AppWebUploadFile**
-   - **Descrição:** Correção de projeto para suportar upload de arquivos no contexto MVC.
+   - **Descrição:** Projeto concentrado na implementação de funcionalidades de upload de arquivos em aplicações web utilizando o padrão MVC.
 
 8. **ConsultaCorreios**
-   - **Descrição:** Correção de projeto relacionado a consulta de informações nos Correios.
+   - **Descrição:** Projeto dedicado à prática de desenvolvimento relacionado a consultas de informações nos Correios.
 
 9. **.gitignore**
    - **Descrição:** Arquivo de configuração para ignorar arquivos e diretórios no Git.
